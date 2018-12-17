@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import { hashHistory } from 'react-router';
 import { Link } from 'react-router-dom';
-import './../styles/home.css'
+import './../styles/home.css';
 
 function Name(props) {
     return(
@@ -14,16 +13,16 @@ function Card(props) {
         <div className="card">
             <div className="card-content">
                 <p className="title">
-                Title
+                {props.details.title}
                 </p>
                 <p className="subtitle">
-                Dexcription
+                {props.details.description}
                 </p>
             </div>
             <footer className="card-footer" onClick={props.onClick}>
                 <p className="card-footer-item">
                 <span>
-                    Action
+                    {props.details.action}
                     <span className="icon"><i className="fa fa-play"></i></span>
                 </span>
                 </p>
@@ -35,7 +34,6 @@ function Card(props) {
 class Home extends Component {
 
     naviagateTo(route) {
-        console.log('Came here!');
         this.props.history.push('/' + route);
     }
 
@@ -43,7 +41,12 @@ class Home extends Component {
         let style = {padding: '20px'};
         let margintop = {marginTop: '20px'};
 
-        let content1 = {title: 'Tic Tac', description: 'Fun game', action: 'Play'};
+        const contents = [
+            {title: 'Tic Tac', description: 'Fun game', action: 'Play'},
+            {title: 'Udemy', description: 'learning', action: 'View'},
+            {title: 'Blanky', description: 'Null', action: 'See blank'}
+        ];
+        
         return(
             <div style={style}>
                 <Name name={'Alisha'}/>
@@ -51,13 +54,13 @@ class Home extends Component {
                 
                 <div className="columns" style={margintop}>
                     <div className="column">
-                        <Card onClick={() => this.naviagateTo('tic-tac')}></Card>
+                        <Card details={contents[0]} onClick={() => this.naviagateTo('tic-tac')}></Card>
                     </div>
                     <div className="column">
-                        <Card></Card>
+                        <Card details={contents[1]} onClick={() => this.naviagateTo('udemy')}></Card>
                     </div>
                     <div className="column">
-                        <Card></Card>
+                        <Card details={contents[2]}></Card>
                     </div>
                 </div> 
             </div>

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "faker": "^4.1.0",
     "font-awesome": "^4.7.0",
     "react": "^16.6.3",
     "react-bulma-components": "^2.3.0",
