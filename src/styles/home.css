@@ -6,3 +6,7 @@
     background-color: #92de67c4; 
     cursor: pointer;
 }
+
+.ui.two.buttons>.button {
+    width: auto;
+}

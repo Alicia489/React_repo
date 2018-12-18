@@ -43,8 +43,8 @@ class Home extends Component {
 
         const contents = [
             {title: 'Tic Tac', description: 'Fun game', action: 'Play'},
-            {title: 'Udemy', description: 'learning', action: 'View'},
-            {title: 'Blanky', description: 'Null', action: 'See blank'}
+            {title: 'Comments', description: 'Udemy', action: 'View'},
+            {title: 'Weather', description: 'Udemy', action: 'Weather Check'}
         ];
         
         return(
@@ -60,7 +60,7 @@ class Home extends Component {
                         <Card details={contents[1]} onClick={() => this.naviagateTo('udemy')}></Card>
                     </div>
                     <div className="column">
-                        <Card details={contents[2]}></Card>
+                        <Card details={contents[2]} onClick={() => this.naviagateTo('weather')}></Card>
                     </div>
                 </div> 
             </div>
