@@ -42,9 +42,10 @@ class Home extends Component {
         let margintop = {marginTop: '20px'};
 
         const contents = [
-            {title: 'Tic Tac', description: 'Fun game', action: 'Play'},
-            {title: 'Comments', description: 'Udemy', action: 'View'},
-            {title: 'Weather', description: 'Udemy', action: 'Weather Check'}
+            {title: 'Tic Tac', description: 'Fun game', action: 'Play', click: 'tic-tac'},
+            {title: 'Comments', description: 'Udemy', action: 'View', click: 'udemy'},
+            {title: 'Weather', description: 'Udemy', action: 'Weather Check', click: 'weather'},
+            {title: 'Forms', description: 'Udemy', action: 'Input', click: 'forms'}
         ];
         
         return(
@@ -53,15 +54,15 @@ class Home extends Component {
                 <h3><Link to={'/tic-tac'}>Wanna play tic tac?</Link></h3>
                 
                 <div className="columns" style={margintop}>
-                    <div className="column">
-                        <Card details={contents[0]} onClick={() => this.naviagateTo('tic-tac')}></Card>
-                    </div>
-                    <div className="column">
-                        <Card details={contents[1]} onClick={() => this.naviagateTo('udemy')}></Card>
-                    </div>
-                    <div className="column">
-                        <Card details={contents[2]} onClick={() => this.naviagateTo('weather')}></Card>
-                    </div>
+                    {
+                        contents.map(content => {
+                            return (
+                                <div className="column">
+                                    <Card details={content} onClick={() => this.naviagateTo(content.click)}></Card>
+                                </div> 
+                            );
+                        })
+                    }
                 </div> 
             </div>
         )

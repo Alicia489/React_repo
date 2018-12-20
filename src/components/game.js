@@ -1,5 +1,5 @@
 import React from 'react';
-import './../styles/game.css'
+import './../styles/game.css';
 import { Button, Container } from "react-bulma-components/full";
 
 function Square(props) {

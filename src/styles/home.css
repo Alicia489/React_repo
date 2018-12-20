@@ -10,3 +10,40 @@
 .ui.two.buttons>.button {
     width: auto;
 }
+
+.top {
+    position: absolute;
+    top:10px;
+    left: 10px;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.winter {
+    background: #ffffff;
+    color: black;
+}
+
+.summer {
+    background-color: #000000;
+    color: white;
+}
+
+.text-weather {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.snowflake {
+    color: aquamarine
+}
+
+.sun {
+    color: orange;
+}

@@ -6,7 +6,7 @@ function Comment(props) {
   return (
     <div className="comment">
       <a href="/" className="avatar">
-        <img src={faker.image.avatar()} />
+        <img src={faker.image.avatar()} alt="Avatar"/>
       </a>
       <div className="content">
         <a href="/" className="author">
