@@ -1,6 +1,5 @@
 import React from 'react';
 import './../styles/game.css';
-import { Button, Container } from "react-bulma-components/full";
 
 function Square(props) {
 	return(
@@ -93,10 +92,10 @@ class Board extends React.Component {
 		}
 
     return (
-      <Container className="container">
+      <div className="container">
         <div className="status">{status}</div>
-				<Button className="button" color="success" onClick={() => this.undo()}>Undo last move</Button>
-				<Button className="button" color="success" onClick={() => this.resetGame()}>Reset Game</Button>
+				<button className="button" color="success" onClick={() => this.undo()}>Undo last move</button>
+				<button className="button" color="success" onClick={() => this.resetGame()}>Reset Game</button>
        
 				{[0,1,2,3,4,5,6,7,8].map(item => {
 					return(
@@ -109,7 +108,7 @@ class Board extends React.Component {
 					) 
 				})}
 
-      </Container>
+      </div>
     );
   }
 }
